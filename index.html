@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiniSR.Keys</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="main-card">
+            <div class="header">
+                <div class="logo">
+                    <span class="logo-icon">◈</span>
+                    <span class="logo-text">MiniSR.Keys</span>
+                    <span class="logo-badge">✦ v3.0</span>
+                </div>
+                <div class="status-dot">
+                    <span class="dot"></span>
+                    <span class="status-text">Online</span>
+                </div>
+            </div>
+
+            <div class="input-section">
+                <div class="input-group">
+                    <span class="input-icon">⌨</span>
+                    <input type="text" id="linkInput" placeholder="► Dán link API Delta vào đây ...">
+                    <button id="clearBtn" class="clear-btn">✕</button>
+                </div>
+                <div class="input-actions">
+                    <button id="startBtn" class="btn-primary">
+                        <span class="btn-icon">▶</span> Start Dump
+                    </button>
+                    <button id="resetBtn" class="btn-secondary">
+                        <span class="btn-icon">⟳</span> Reset
+                    </button>
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-icon">⭐</span>
+                    <div class="stat-info">
+                        <span class="stat-label">Đánh giá</span>
+                        <span class="stat-value" id="ratingDisplay">4.9/5</span>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-icon">◉</span>
+                    <div class="stat-info">
+                        <span class="stat-label">Lượt sử dụng</span>
+                        <span class="stat-value" id="usageCount">1,284</span>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-icon">⌛</span>
+                    <div class="stat-info">
+                        <span class="stat-label">TB lấy key</span>
+                        <span class="stat-value" id="avgTime">0.8s</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="processPanel" class="process-panel hidden">
+                <div class="process-header">
+                    <span class="process-icon">⚡</span>
+                    <span class="process-title">Đang xử lý ...</span>
+                    <span class="process-timer" id="dumpTimer">00:00</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <div class="process-log" id="processLog">
+                    <div class="log-line">⏳ Khởi tạo dump engine ...</div>
+                </div>
+            </div>
+
+            <div id="resultPanel" class="result-panel hidden">
+                <div class="result-header">
+                    <span class="result-icon">✓</span>
+                    <span class="result-title">Key đã sẵn sàng!</span>
+                </div>
+                <div class="result-key" id="keyDisplay">DELTA-XXXX-XXXX-XXXX</div>
+                <div class="result-details">
+                    <div class="detail-item">
+                        <span class="detail-icon">⏱</span>
+                        <span class="detail-label">Thời gian tồn tại:</span>
+                        <span class="detail-value" id="timeLeft">23h 45m</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-icon">⚙</span>
+                        <span class="detail-label">Executor:</span>
+                        <span class="detail-value" id="executorName">Delta Executor Pro</span>
+                    </div>
+                </div>
+                <button id="copyBtn" class="btn-copy">
+                    <span class="btn-icon">⎘</span> Sao chép Key
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+                  </html>
